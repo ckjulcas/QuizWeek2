@@ -4,7 +4,6 @@ author: "Christian Julca"
 date: "3 de febrero de 2019"
 output:
   word_document: default
-  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Summary of Air Quality Dataset
-
 
 In this paragraph, provide the syntax to: show “air quality” in non-proportional font using backticks; create a non-numbered bulleted list for the 6 variables in the dataset; put each variable name in bold using double asterisks; put everything in parentheses in italics by placing a single underscore immediately before and after the opening and closing parentheses; notice that the 1st sentence contains an inline footnote which should appear at the bottom of your document when compiled. 
 This exercise will be working with the built-in air quality dataset.^[ Chambers, J. M., Cleveland, W. S., Kleiner, B. and Tukey, P. A. (1983) Graphical Methods for Data Analysis. Belmont, CA: Wadsworth.] This dataset contains 154 daily air quality measurements in New York from May 1, 1973 (a Tuesday) to September 30, 1973. The dataset contains 6 variables:
@@ -32,7 +30,8 @@ knitr::kable(head(airquality),
 
 ### Plot of Ozone by Temperature –Air Quality Dataset
 
-code chunk with the following code
+code chunk with the following code:
+
 ```{r} 
 plot(airquality$Temp, airquality$Ozone,  
         main="Airquality: Ozone by Temperature") 
