@@ -1,0 +1,42 @@
+---
+title: "The Air Quality Dataset"
+author: "Christian Julca"
+date: "3 de febrero de 2019"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary of Air Quality Dataset
+
+
+In this paragraph, provide the syntax to: show “air quality” in non-proportional font using backticks; create a non-numbered bulleted list for the 6 variables in the dataset; put each variable name in bold using double asterisks; put everything in parentheses in italics by placing a single underscore immediately before and after the opening and closing parentheses; notice that the 1st sentence contains an inline footnote which should appear at the bottom of your document when compiled. 
+This exercise will be working with the built-in air quality dataset.^[ Chambers, J. M., Cleveland, W. S., Kleiner, B. and Tukey, P. A. (1983) Graphical Methods for Data Analysis. Belmont, CA: Wadsworth.] This dataset contains 154 daily air quality measurements in New York from May 1, 1973 (a Tuesday) to September 30, 1973. The dataset contains 6 variables:
+
+* **Ozone**: Mean ozone in parts per billion (ppb) from 1300 to 1500 hours at Roosevelt Island;
+* **Solar.R**: Solar radiation in Langleys (lang) in the frequency band 4000–7700 Angstroms from 0800 to 1200 hours at Central Park;
+* **Wind**: Average wind speed in miles per hour (mph) at 0700 and 1000 hours at LaGuardia Airport;
+* **Temp**: Maximum daily temperature in degrees Fahrenheit (oF) at LaGuardia Airport;
+* **Month**: numeric month (1-12)
+* **Day**: numeric Day of the month (1-31)
+
+### Table of Top of the Air Quality Dataset
+```{r}
+knitr::kable(head(airquality), 
+                      caption = "Top of the Air Quality Dataset") 
+```
+
+### Plot of Ozone by Temperature –Air Quality Dataset
+
+code chunk with the following code
+```{r} 
+plot(airquality$Temp, airquality$Ozone,  
+        main="Airquality: Ozone by Temperature") 
+```
+
+
+
